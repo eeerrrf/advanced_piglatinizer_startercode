@@ -8,6 +8,41 @@
 
 $(document).ready(function() {
 
+    $("button").click(function(){
+        
+    var text = $("input").val();  
+    
+    if(text.charAt(0)==="a"||text.charAt(0)==="e"
+    ||text.charAt(0)==="i"
+    ||text.charAt(0)==="o"
+    ||text.charAt(0)==="u"
+    ||text.charAt(0)==="y"
+    ||text.charAt(0)==="A"
+    ||text.charAt(0)==="E"
+    ||text.charAt(0)==="I"
+    ||text.charAt(0)==="O"
+    ||text.charAt(0)==="U"
+    ||text.charAt(0)==="Y"){
+        $("div").html(text+"yay");
+    }
+
+    else{ 
+        var othertext = text.charAt(0)-text.substring(1000);
+       $("div").html(othertext+"ay");
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
     // This function should return true if the input word starts with a vowel,
     // otherwise it should return false.
     function wordStartsWithVowel(word) {
