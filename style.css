@@ -6,3 +6,14 @@ h1::first-letter {
     Background-color:pink;
     border-radius:300px;
 }
+
+button{
+    border-radius:3000px;
+    background-color:green;
+}
+
+input{
+    background-color:pink;
+    border-radius:3000px;
+    
+}
