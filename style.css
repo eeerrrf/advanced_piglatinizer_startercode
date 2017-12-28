@@ -5,6 +5,7 @@ h1{
 h1::first-letter {
     Background-color:pink;
     border-radius:300px;
+   font-family: "Holtwood One SC";
 }
 
 button{
@@ -16,4 +17,18 @@ input{
     background-color:pink;
     border-radius:3000px;
     
+}
+
+p{
+    font-size:50px;
+    font-family: "Holtwood One SC";
+}
+
+.output{
+    background-color:yellow;
+}
+
+div{
+    font-size:40px;
+    font-family: "Holtwood One SC";
 }
