@@ -27,11 +27,21 @@ $(document).ready(function() {
     }
 
     else{ 
-        var othertext = text.charAt(0)-text.substring(1000);
-       $("div").html(othertext+"ay");
+        var othertext = text.substring(1,40);
+       $("div").html(othertext+text.charAt(0)+"ay");
     }
 });
 
+$("h1").click(function(){
+    alert("Oink Oink");
+    var hog = 1;
+    
+    if (hog===2){
+    alert("Hey this is my land sow (name of plant stuff) I will be the only I get to hog up this area.")
+    
+}
+    
+});
 
 
 
