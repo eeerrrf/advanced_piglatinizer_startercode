@@ -10,94 +10,95 @@ $(document).ready(function() {
 
     $("button").click(function(){
     
-    if(text==="land"){
-        alert("secret");
-        $("div").html("Goodness grassious, how did you find this secret,");
-    }
+        if(text==="land"){
+            alert("secret");
+            $("div").html("Goodness grassious, how did you find this secret,");
+        }
     
-    else if(text==="park"){
-        alert("secret");
-        $("div").html("Man, I just love pignics, I can't pigture how this could get any better.");
-    }
+        else if(text==="park"){
+            alert("secret");
+            $("div").html("Man, I just love pignics, I can't pigture how this could get any better.");
+        }
     
-    function pig(word){
-        var output;
+        function pig(word){
+            var output;
+            
+            if(text.charAt(0)==="a"
+                ||text.charAt(0)==="e"
+                ||text.charAt(0)==="i"
+                ||text.charAt(0)==="o"
+                ||text.charAt(0)==="u"
+                ||text.charAt(0)==="y"
+                ||text.charAt(0)==="A"
+                ||text.charAt(0)==="E"
+                ||text.charAt(0)==="I"
+                ||text.charAt(0)==="O"
+                ||text.charAt(0)==="U"
+                ||text.charAt(0)==="Y"){
+                output = text+"yay";
+                return output;
+            }
         
-    if(text.charAt(0)==="a"
-    ||text.charAt(0)==="e"
-    ||text.charAt(0)==="i"
-    ||text.charAt(0)==="o"
-    ||text.charAt(0)==="u"
-    ||text.charAt(0)==="y"
-    ||text.charAt(0)==="A"
-    ||text.charAt(0)==="E"
-    ||text.charAt(0)==="I"
-    ||text.charAt(0)==="O"
-    ||text.charAt(0)==="U"
-    ||text.charAt(0)==="Y"){
-        output = text+"yay";
-        return output;
-    }
-
-    else if (
-    text.charAt(0)==="b"
-    ||text.charAt(0)==="c"
-    ||text.charAt(0)==="d"
-    ||text.charAt(0)==="f"
-    ||text.charAt(0)==="g"
-    ||text.charAt(0)==="h"
-    ||text.charAt(0)==="i"
-    ||text.charAt(0)==="j"
-    ||text.charAt(0)==="k"
-    ||text.charAt(0)==="l"
-    ||text.charAt(0)==="m"
-    ||text.charAt(0)==="n"
-    ||text.charAt(0)==="p"
-    ||text.charAt(0)==="q"
-    ||text.charAt(0)==="r"
-    ||text.charAt(0)==="s"
-    ||text.charAt(0)==="t"
-    ||text.charAt(0)==="v"
-    ||text.charAt(0)==="w"
-    ||text.charAt(0)==="x"
-    ||text.charAt(0)==="z"
-    ||text.charAt(0)==="B"
-    ||text.charAt(0)==="C"
-    ||text.charAt(0)==="D"
-    ||text.charAt(0)==="F"
-    ||text.charAt(0)==="G"
-    ||text.charAt(0)==="H"
-    ||text.charAt(0)==="I"
-    ||text.charAt(0)==="J"
-    ||text.charAt(0)==="K"
-    ||text.charAt(0)==="L"
-    ||text.charAt(0)==="M"
-    ||text.charAt(0)==="N"
-    ||text.charAt(0)==="P"
-    ||text.charAt(0)==="Q"
-    ||text.charAt(0)==="R"
-    ||text.charAt(0)==="S"
-    ||text.charAt(0)==="T"
-    ||text.charAt(0)==="V"
-    ||text.charAt(0)==="W"
-    ||text.charAt(0)==="X"
-    ||text.charAt(0)==="Z"
-    ){ 
-        var othertext = text.substring(1,400);
-        output = othertext+text.charAt(0)+"ay";
-        return output;
-    }
+            else if (
+                text.charAt(0)==="b"
+                ||text.charAt(0)==="c"
+                ||text.charAt(0)==="d"
+                ||text.charAt(0)==="f"
+                ||text.charAt(0)==="g"
+                ||text.charAt(0)==="h"
+                ||text.charAt(0)==="i"
+                ||text.charAt(0)==="j"
+                ||text.charAt(0)==="k"
+                ||text.charAt(0)==="l"
+                ||text.charAt(0)==="m"
+                ||text.charAt(0)==="n"
+                ||text.charAt(0)==="p"
+                ||text.charAt(0)==="q"
+                ||text.charAt(0)==="r"
+                ||text.charAt(0)==="s"
+                ||text.charAt(0)==="t"
+                ||text.charAt(0)==="v"
+                ||text.charAt(0)==="w"
+                ||text.charAt(0)==="x"
+                ||text.charAt(0)==="z"
+                ||text.charAt(0)==="B"
+                ||text.charAt(0)==="C"
+                ||text.charAt(0)==="D"
+                ||text.charAt(0)==="F"
+                ||text.charAt(0)==="G"
+                ||text.charAt(0)==="H"
+                ||text.charAt(0)==="I"
+                ||text.charAt(0)==="J"
+                ||text.charAt(0)==="K"
+                ||text.charAt(0)==="L"
+                ||text.charAt(0)==="M"
+                ||text.charAt(0)==="N"
+                ||text.charAt(0)==="P"
+                ||text.charAt(0)==="Q"
+                ||text.charAt(0)==="R"
+                ||text.charAt(0)==="S"
+                ||text.charAt(0)==="T"
+                ||text.charAt(0)==="V"
+                ||text.charAt(0)==="W"
+                ||text.charAt(0)==="X"
+                ||text.charAt(0)==="Z"
+            ){ 
+                var othertext = text.substring(1,400);
+                output = othertext+text.charAt(0)+"ay";
+                return output;
+            }
     
-    else{
-        $("div").html("invalid text, please try again.");
-    }
+            else{
+                $("div").html("invalid text, please try again.");
+            }
     
-    }
+        }
+    
     var text = $("input").val(); 
-var testResult4 = pig(text);
-$("div").html(testResult4);
+    var testResult4 = pig(text);
+    $("div").html(testResult4);
     
-});
+    });
 
 $("h1").click(function(){
     
