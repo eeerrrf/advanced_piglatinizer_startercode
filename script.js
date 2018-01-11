@@ -9,8 +9,6 @@
 $(document).ready(function() {
 
     $("button").click(function(){
-        
-    var text = $("input").val();  
     
     if(text==="land"){
         alert("secret");
@@ -22,7 +20,10 @@ $(document).ready(function() {
         $("div").html("Man, I just love pignics, I can't pigture how this could get any better.");
     }
     
-    else if(text.charAt(0)==="a"
+    function pig(word){
+        var output;
+        
+    if(text.charAt(0)==="a"
     ||text.charAt(0)==="e"
     ||text.charAt(0)==="i"
     ||text.charAt(0)==="o"
@@ -34,7 +35,8 @@ $(document).ready(function() {
     ||text.charAt(0)==="O"
     ||text.charAt(0)==="U"
     ||text.charAt(0)==="Y"){
-        $("div").html(text+"yay");
+        output = text+"yay";
+        return output;
     }
 
     else if (
@@ -81,13 +83,19 @@ $(document).ready(function() {
     ||text.charAt(0)==="X"
     ||text.charAt(0)==="Z"
     ){ 
-        var othertext = text.substring(1,40);
-       $("div").html(othertext+text.charAt(0)+"ay");
+        var othertext = text.substring(1,400);
+        output = othertext+text.charAt(0)+"ay";
+        return output;
     }
     
     else{
         $("div").html("invalid text, please try again.");
     }
+    
+    }
+    var text = $("input").val(); 
+var testResult4 = pig(text);
+$("div").html(testResult4);
     
 });
 
