@@ -20,8 +20,48 @@ $(document).ready(function() {
             $("div").html("Man, I just love pignics, I can't pigture how this could get any better.");
         }
     
-        function pig(word){
-            var output;
+    
+    });
+
+$("h1").click(function(){
+    
+    alert("Oink Oink. Hey this is my land sow (name of plant stuff) I will be the only one to hog up this area.");
+    
+});
+
+
+
+
+
+
+
+
+
+
+
+    // This function should return true if the input word starts with a vowel,
+    // otherwise it should return false.
+    function wordStartsWithVowel(word) {
+
+    }
+
+    // Appends "yay" to the end of the word and returns the word.
+    function appendYayToWord(word) {
+
+    }
+
+    // Moves the first consonant to the end of the word, appends "ay" to the end of the word,
+    // and returns the word.
+    function convertWordWithConsonant(word) {
+
+    }
+
+    // If the word starts with a vowel, return the result of appendYayToWord.
+    // Otherwise, return the result of convertWordWithConsonant.
+    function convertWordToPigLatin(word) {
+ var output;
+            
+            var apple =text.split(" ");
             
             if(text.charAt(0)==="a"
                 ||text.charAt(0)==="e"
@@ -35,11 +75,14 @@ $(document).ready(function() {
                 ||text.charAt(0)==="O"
                 ||text.charAt(0)==="U"
                 ||text.charAt(0)==="Y"){
-                output = text+"yay";
+                for ( var sentence =0; sentence <100; sentence=sentence +1){
+                output = text [sentence]+"yay";
                 return output;
+                     }
             }
-        
+       
             else if (
+                
                 text.charAt(0)==="b"
                 ||text.charAt(0)==="c"
                 ||text.charAt(0)==="d"
@@ -83,9 +126,12 @@ $(document).ready(function() {
                 ||text.charAt(0)==="X"
                 ||text.charAt(0)==="Z"
             ){ 
+                 for ( var sentence =0; sentence <text.length; sentence=sentence +1){
                 var othertext = text.substring(1,400);
-                output = othertext+text.charAt(0)+"ay";
+                output = othertext[sentence]+text.charAt(0)+"ay";
                 return output;
+            
+                }
             }
     
             else{
@@ -93,51 +139,11 @@ $(document).ready(function() {
             }
     
         }
-    
-    var text = $("input").val(); 
-    var testResult4 = pig(text);
-    $("div").html(testResult4);
-    
-    });
-
-$("h1").click(function(){
-    
-    alert("Oink Oink. Hey this is my land sow (name of plant stuff) I will be the only one to hog up this area.");
-    
-});
-
-
-
-
-
-
-
-
-
-
-
-    // This function should return true if the input word starts with a vowel,
-    // otherwise it should return false.
-    function wordStartsWithVowel(word) {
-
     }
-
-    // Appends "yay" to the end of the word and returns the word.
-    function appendYayToWord(word) {
-
-    }
-
-    // Moves the first consonant to the end of the word, appends "ay" to the end of the word,
-    // and returns the word.
-    function convertWordWithConsonant(word) {
-
-    }
-
-    // If the word starts with a vowel, return the result of appendYayToWord.
-    // Otherwise, return the result of convertWordWithConsonant.
-    function convertWordToPigLatin(word) {
-
-    }
+    
+         var text = $("input").val(); 
+     var testResult4 = convertWordToPigLatin(text);
+     $("div").html(testResult4);
 
     // Create a click handler that takes is triggered when the user clicks the translate button.
         // Gets a word from the input box
