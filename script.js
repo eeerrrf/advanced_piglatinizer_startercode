@@ -139,9 +139,9 @@ $("h1").click(function(){
             }
     
         }
-    }
     
-         var text = $("input").val(); 
+    
+     var text = $("input").val(); 
      var testResult4 = convertWordToPigLatin(text);
      $("div").html(testResult4);
 
