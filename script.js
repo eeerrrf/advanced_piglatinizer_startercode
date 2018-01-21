@@ -59,9 +59,8 @@ $("h1").click(function(){
     // If the word starts with a vowel, return the result of appendYayToWord.
     // Otherwise, return the result of convertWordWithConsonant.
     function convertWordToPigLatin(word) {
- var output;
+            var output;
             
-            var apple =text.split(" ");
             
             if(text.charAt(0)==="a"
                 ||text.charAt(0)==="e"
@@ -75,10 +74,10 @@ $("h1").click(function(){
                 ||text.charAt(0)==="O"
                 ||text.charAt(0)==="U"
                 ||text.charAt(0)==="Y"){
-                for ( var sentence =0; sentence <100; sentence=sentence +1){
+               
                 output = text [sentence]+"yay";
                 return output;
-                     }
+                     
             }
        
             else if (
@@ -126,12 +125,9 @@ $("h1").click(function(){
                 ||text.charAt(0)==="X"
                 ||text.charAt(0)==="Z"
             ){ 
-                 for ( var sentence =0; sentence <text.length; sentence=sentence +1){
                 var othertext = text.substring(1,400);
                 output = othertext[sentence]+text.charAt(0)+"ay";
                 return output;
-            
-                }
             }
     
             else{
@@ -141,8 +137,12 @@ $("h1").click(function(){
         }
     
     
-     var text = $("input").val(); 
+      for ( var sentence =0; sentence <text.length-1; sentence=sentence +1){
+           var words = $("input").val(); 
+          var text = words.split(" ");
      var testResult4 = convertWordToPigLatin(text);
+      }
+      
      $("div").html(testResult4);
 
     // Create a click handler that takes is triggered when the user clicks the translate button.
