@@ -8,12 +8,8 @@
 
 $(document).ready(function() {
 
-    $("button").click(function(){
+    $(".button").click(function(){
  
-
-
-    
-
 
 
     for ( var sentence =0; sentence <100; sentence=sentence +1) { 
@@ -44,11 +40,6 @@ $("h1").click(function(){
     alert("Oink Oink. Hey this is my land sow (name of plant stuff) I will be the only one to hog up this area.");
     
 });
-
-
-
-
-
 
 
 
