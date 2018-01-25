@@ -9,28 +9,33 @@
 $(document).ready(function() {
 
     $("button").click(function(){
+ 
 
 
-    for ( var sentence =0; sentence <text.length-1; sentence=sentence +1) { 
-                                        var um= text.split(" ");
-      alert("output");
-           var words = $("input").val(); 
-          //var word= words.split(" ");
-     var testResult4 = convertWordToPigLatin(words);
-    }
-      
-     $("div").html(testResult4);
     
-        if(word==="land"){
+
+
+
+    for ( var sentence =0; sentence <100; sentence=sentence +1) { 
+           var words = $("input").val(); 
+         var word= words.split(" ");
+         var text= word[sentence];
+     var testResult4 = convertWordToPigLatin(text);
+          $("div").append('<p>' + testResult4 +'</p>');
+    }
+
+     if(words==="land"){
             alert("secret");
             $("div").html("Goodness grassious, how did you find this secret,");
         }
     
-        else if(word==="park"){
+        else if(words==="park"){
             alert("secret");
             $("div").html("Man, I just love pignics, I can't pigture how this could get any better.");
-        }
+        }      
+
     
+   
     
     });
 
@@ -143,9 +148,6 @@ $("h1").click(function(){
                 return output;
             }
     
-            else{
-                $("div").html("invalid text, please try again.");
-            }
         }
     
     
