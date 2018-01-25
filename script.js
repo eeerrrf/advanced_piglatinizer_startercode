@@ -11,12 +11,13 @@ $(document).ready(function() {
     $("button").click(function(){
 
 
-  for ( var sentence =0; sentence <words.length-1; sentence=sentence +1){
+    for ( var sentence =0; sentence <text.length-1; sentence=sentence +1) { 
+                                        var um= text.split(" ");
       alert("output");
            var words = $("input").val(); 
-          var word= words.split(" ");
-     var testResult4 = convertWordToPigLatin(word);
-      }
+          //var word= words.split(" ");
+     var testResult4 = convertWordToPigLatin(words);
+    }
       
      $("div").html(testResult4);
     
@@ -70,7 +71,7 @@ $("h1").click(function(){
     // Otherwise, return the result of convertWordWithConsonant.
     function convertWordToPigLatin(text) {
             var output;
-                            
+                           
             
             if(text.charAt(0)==="a"
                 ||text.charAt(0)==="e"
@@ -86,7 +87,7 @@ $("h1").click(function(){
                 ||text.charAt(0)==="Y"){
                
                
-                output = text [sentence]+"yay";
+                output = text +"yay";
 
                 return output;
                      
@@ -138,14 +139,13 @@ $("h1").click(function(){
                 ||text.charAt(0)==="Z"
             ){ 
                 var othertext = text.substring(1,400);
-                output = othertext[sentence]+text.charAt(0)+"ay";
+                output = othertext+text.charAt(0)+"ay";
                 return output;
             }
     
             else{
                 $("div").html("invalid text, please try again.");
             }
-    
         }
     
     
