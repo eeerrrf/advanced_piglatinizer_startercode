@@ -9,13 +9,23 @@
 $(document).ready(function() {
 
     $("button").click(function(){
+
+
+  for ( var sentence =0; sentence <words.length-1; sentence=sentence +1){
+      alert("output");
+           var words = $("input").val(); 
+          var word= words.split(" ");
+     var testResult4 = convertWordToPigLatin(word);
+      }
+      
+     $("div").html(testResult4);
     
-        if(text==="land"){
+        if(word==="land"){
             alert("secret");
             $("div").html("Goodness grassious, how did you find this secret,");
         }
     
-        else if(text==="park"){
+        else if(word==="park"){
             alert("secret");
             $("div").html("Man, I just love pignics, I can't pigture how this could get any better.");
         }
@@ -58,9 +68,9 @@ $("h1").click(function(){
 
     // If the word starts with a vowel, return the result of appendYayToWord.
     // Otherwise, return the result of convertWordWithConsonant.
-    function convertWordToPigLatin(word) {
+    function convertWordToPigLatin(text) {
             var output;
-            
+                            
             
             if(text.charAt(0)==="a"
                 ||text.charAt(0)==="e"
@@ -75,7 +85,9 @@ $("h1").click(function(){
                 ||text.charAt(0)==="U"
                 ||text.charAt(0)==="Y"){
                
+               
                 output = text [sentence]+"yay";
+
                 return output;
                      
             }
@@ -137,13 +149,7 @@ $("h1").click(function(){
         }
     
     
-      for ( var sentence =0; sentence <text.length-1; sentence=sentence +1){
-           var words = $("input").val(); 
-          var text = words.split(" ");
-     var testResult4 = convertWordToPigLatin(text);
-      }
-      
-     $("div").html(testResult4);
+    
 
     // Create a click handler that takes is triggered when the user clicks the translate button.
         // Gets a word from the input box
